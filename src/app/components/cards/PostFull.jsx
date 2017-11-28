@@ -23,12 +23,12 @@ import tt from 'counterpart';
 import userIllegalContent from 'app/utils/userIllegalContent';
 import ImageUserBlockList from 'app/utils/ImageUserBlockList';
 import LoadingIndicator from 'app/components/elements/LoadingIndicator';
-import config from 'config';
+import { client } from 'config';
 
 const {
     APP_DOMAIN,
     APP_NAME
-} = config.client;
+} = client;
 
 // function loadFbSdk(d, s, id) {
 //     return new Promise(resolve => {

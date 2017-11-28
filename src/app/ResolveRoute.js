@@ -1,3 +1,5 @@
+import config from 'config';
+
 export const routeRegex = {
     PostsIndex: /^\/(@[\w\.\d-]+)\/feed\/?$/,
     UserProfile1: /^\/(@[\w\.\d-]+)\/?$/,
@@ -35,7 +37,7 @@ export default function resolveRoute(path)
     if (path === '/support.html') {
         return {page: 'Support'};
     }
-    if (path === '/xss/test' && process.env.NODE_ENV !== 'production') {
+    if (path === '/xss/test' && config.NODE_ENV !== 'production') {
         return {page: 'XSSTest'};
     }
     if (path.match(/^\/tags\/?/)) {

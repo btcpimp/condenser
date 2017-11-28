@@ -5,14 +5,14 @@ import LoadingIndicator from 'app/components/elements/LoadingIndicator'
 import {validate_account_name} from 'app/utils/ChainValidation'
 import {cleanReduxInput} from 'app/utils/ReduxForms'
 import tt from 'counterpart';
-import config from 'config';
+import { client } from 'config';
 import {PrivateKey, PublicKey, key_utils} from 'steem/lib/auth/ecc';
 import {api} from 'steem';
 
 const {string, oneOf} = React.PropTypes;
 const {
     APP_NAME
-} = config.client;
+} = client;
 
 class ChangePassword extends React.Component {
     static propTypes = {

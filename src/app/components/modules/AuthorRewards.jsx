@@ -4,7 +4,7 @@ import {connect} from 'react-redux'
 import TransferHistoryRow from 'app/components/cards/TransferHistoryRow';
 import {numberWithCommas, vestsToSp, assetFloat} from 'app/utils/StateFunctions'
 import tt from 'counterpart';
-import config from 'config';
+import { client } from 'config';
 
 const {
     VESTING_TOKEN,
@@ -12,7 +12,7 @@ const {
     VEST_TICKER,
     DEBT_TICKER,
     DEBT_TOKEN_SHORT,
-} = config.client;
+} = client;
 
 class AuthorRewards extends React.Component {
     constructor() {

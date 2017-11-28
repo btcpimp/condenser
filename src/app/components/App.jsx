@@ -20,11 +20,11 @@ import {serverApiRecordEvent} from 'app/utils/ServerApiClient';
 import {key_utils} from 'steem/lib/auth/ecc';
 import resolveRoute from 'app/ResolveRoute';
 import {VIEW_MODE_WHISTLE} from 'shared/constants';
-import config from 'config';
+import { client } from 'config';
 
 const {
     LIQUID_TOKEN
-} = config.client;
+} = client;
 
 const pageRequiresEntropy = (path) => {
     const {page} = resolveRoute(path);

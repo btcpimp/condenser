@@ -1,13 +1,13 @@
 import React from "react";
 import HistoryRow from "./OrderhistoryRow";
 import tt from 'counterpart';
-import config from 'config';
+import { client } from 'config';
 
 const {
     LIQUID_TOKEN_SHORT,
     DEBT_TOKEN_SHORT,
     CURRENCY_SIGN,
-} = config.client;
+} = client;
 
 export default class OrderHistory extends React.Component {
 

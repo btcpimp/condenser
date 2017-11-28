@@ -1,11 +1,11 @@
 import React from 'react';
 import tt from 'counterpart';
-import config from 'config';
+import { client } from 'config';
 
 const {
     APP_NAME,
     APP_URL,
-} = config.client;
+} = client;
 
 class About extends React.Component {
     render() {

@@ -9,11 +9,11 @@ import shouldComponentUpdate from 'app/utils/shouldComponentUpdate';
 import HorizontalMenu from 'app/components/elements/HorizontalMenu';
 import normalizeProfile from 'app/utils/NormalizeProfile';
 import tt from 'counterpart';
-import config from 'config';
+import { client } from 'config';
 
 const {
     APP_NAME,
-} = config.client;
+} = client;
 
 function sortOrderToLink(so, topic, account) {
     if (so === 'home') return '/@' + account + '/feed';

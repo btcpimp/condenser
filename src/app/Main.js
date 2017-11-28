@@ -10,7 +10,7 @@ import ConsoleExports from './utils/ConsoleExports';
 import {serverApiRecordEvent} from 'app/utils/ServerApiClient';
 import * as steem from 'steem';
 import {determineViewMode} from "app/utils/Links";
-
+import config from 'config';
 
 window.onerror = error => {
     if (window.$STM_csrf) serverApiRecordEvent('client_error', error);
@@ -21,7 +21,7 @@ const CMD_LOG_TOGGLE = 'log-toggle';
 const CMD_LOG_O = 'log-on';
 
 try {
-    if(process.env.NODE_ENV !== 'production') {
+    if(config.NODE_ENV !== 'production') {
         // Adds some object refs to the global window object
         ConsoleExports.init(window)
     }

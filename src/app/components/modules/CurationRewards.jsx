@@ -4,7 +4,7 @@ import {connect} from 'react-redux'
 import TransferHistoryRow from 'app/components/cards/TransferHistoryRow';
 import {numberWithCommas, vestsToSp, assetFloat} from 'app/utils/StateFunctions'
 import tt from 'counterpart';
-import config from 'config';
+import { client } from 'config';
 
 const {
     APP_NAME,
@@ -15,7 +15,7 @@ const {
     VESTING_TOKEN,
     LIQUID_TICKER,
     VEST_TICKER,
-} = config.client;
+} = client;
 
 class CurationRewards extends React.Component {
     constructor() {

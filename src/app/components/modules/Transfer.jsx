@@ -9,13 +9,13 @@ import runTests, {browserTests} from 'app/utils/BrowserTests'
 import {validate_account_name, validate_memo_field} from 'app/utils/ChainValidation';
 import {countDecimals} from 'app/utils/ParsersAndFormatters'
 import tt from 'counterpart';
-import config from 'config';
+import { client } from 'config';
 
 const {
     APP_NAME,
     LIQUID_TOKEN,
     VESTING_TOKEN,
-} = config.client
+} = client
 
 /** Warning .. This is used for Power UP too. */
 class TransferForm extends Component {

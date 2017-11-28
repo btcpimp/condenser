@@ -16,14 +16,14 @@ import {FormattedHTMLMessage} from 'app/Translator';
 import tt from 'counterpart';
 import {List} from 'immutable'
 import transaction from 'app/redux/Transaction';
-import config from 'config';
+import { client } from 'config';
 
 const {
     LIQUID_TOKEN,
     LIQUID_TICKER,
     DEBT_TOKENS,
     VESTING_TOKEN,
-} = config.client
+} = client
 
 const assetPrecision = 1000;
 

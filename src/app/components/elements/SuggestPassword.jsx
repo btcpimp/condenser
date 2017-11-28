@@ -7,12 +7,12 @@ import shouldComponentUpdate from 'app/utils/shouldComponentUpdate'
 import Icon from 'app/components/elements/Icon'
 import tt from 'counterpart';
 import {key_utils} from 'steem/lib/auth/ecc';
-import config from 'config';
+import { client } from 'config';
 
 const {
     APP_NAME,
     APP_ICON,
-} = config.client;
+} = client;
 
 
 const {bool} = React.PropTypes

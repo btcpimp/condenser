@@ -1,9 +1,10 @@
 import React from 'react'
 import MarkdownViewer from 'app/components/cards/MarkdownViewer'
+import { NODE_ENV } from 'config';
 
 class XSS extends React.Component {
     render() {
-        if(!process.env.NODE_ENV !== 'production') return <div></div>
+        if(!NODE_ENV !== 'production') return <div></div>
         let tests = xss.map( (test, i) => <div key={i}><h2>Test {i}</h2><MarkdownViewer formId={'xsstest' + i} text={test} /><hr /></div>)
         return <div className="row">
             <div className="column column-12">

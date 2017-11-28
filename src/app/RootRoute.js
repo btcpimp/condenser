@@ -1,6 +1,7 @@
 import App from 'app/components/App';
 import PostsIndex from 'app/components/pages/PostsIndex';
 import resolveRoute from './ResolveRoute';
+import config from 'config';
 
 // polyfill webpack require.ensure
 if (typeof require.ensure !== 'function') require.ensure = (d, c) => c(require);
@@ -34,7 +35,7 @@ export default {
             //require.ensure([], (require) => {
             cb(null, [require('app/components/pages/Support')]);
             //});
-        } else if (route.page === 'XSSTest' && process.env.NODE_ENV !== 'production') {
+        } else if (route.page === 'XSSTest' && config.NODE_ENV !== 'production') {
             //require.ensure([], (require) => {
             cb(null, [require('app/components/pages/XSS')]);
             //});

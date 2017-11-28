@@ -1,8 +1,8 @@
 import React from 'react';
 import Icon from 'app/components/elements/Icon';
-import config from 'config';
+import { client } from 'config';
 
-const { APP_NAME } = config.client;
+const { APP_NAME } = client;
 
 export default function MiniHeader() {
     console.log('CONFIG!', config)

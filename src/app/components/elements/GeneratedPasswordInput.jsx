@@ -1,11 +1,11 @@
 import React from 'react';
 import tt from 'counterpart';
 import {key_utils} from 'steem/lib/auth/ecc';
-import config from 'config';
+import { client } from 'config';
 
 const {
     APP_NAME
-} = config.client;
+} = client;
 
 
 function allChecked(confirmCheckboxes) {

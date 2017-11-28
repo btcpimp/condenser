@@ -30,7 +30,7 @@ tt.registerTranslations('fr', require('app/locales/fr.json'));
 tt.registerTranslations('it', require('app/locales/counterpart/it'));
 tt.registerTranslations('it', require('app/locales/it.json'));
 
-if (process.env.NODE_ENV === 'production') {
+if (config.NODE_ENV === 'production') {
 tt.setFallbackLocale('en');
 }
 

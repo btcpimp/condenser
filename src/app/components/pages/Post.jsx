@@ -13,11 +13,11 @@ import { localizedCurrency } from 'app/components/elements/LocalizedCurrency';
 import shouldComponentUpdate from 'app/utils/shouldComponentUpdate';
 import {serverApiRecordEvent} from 'app/utils/ServerApiClient';
 import { isLoggedIn } from 'app/utils/UserUtil';
-import config from 'config';
+import { client } from 'config';
 
 const {
     INVEST_TOKEN_UPPERCASE,
-} = config.client;
+} = client;
 
 
 class Post extends React.Component {

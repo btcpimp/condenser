@@ -7,13 +7,13 @@ import transaction from 'app/redux/Transaction';
 import user from 'app/redux/User';
 import tt from 'counterpart'
 import {numberWithCommas, spToVestsf, vestsToSpf, vestsToSp, assetFloat} from 'app/utils/StateFunctions'
-import config from 'config';
+import { client } from 'config';
 
 const {
     VEST_TICKER,
     LIQUID_TICKER,
     VESTING_TOKEN
-} = config.client;
+} = client;
 
 class Powerdown extends React.Component {
 
