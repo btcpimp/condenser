@@ -10,6 +10,7 @@ describe ( 'routeRegex', () => {
             ['UserProfile3', /^\/(@[\w\d.-]+)\/([\w\d-]+)/],
             ['CategoryFilters', /^\/(hot|votes|responses|trending|trending30|promoted|cashout|payout|payout_comments|created|active)\/?$/ig],
             ['PostNoCategory', /^\/(@[\w\d.-]+)\/([\w\d-]+)/],
+            ['FilterOrCategory', /^\/(hot|votes|responses|trending|trending30|promoted|cashout|payout|payout_comments|created|active)\/([\u4E00-\u9FA5\u0400-\u044F\w\d-]+)*\/?$/],
             ['Post',     /^\/([\u4E00-\u9FA5\u0400-\u044F\w\d-]+)\/(@[\w\d.-]+)\/([\w\d-]+)\/?$/],
             ['PostJson', /^\/([\u4E00-\u9FA5\u0400-\u044F\w\d-]+)\/(@[\w\d.-]+)\/([\w\d-]+)[.json]$/],
             ['UserJson', /^\/(@[\w\d.-]+)[.json]$/],
